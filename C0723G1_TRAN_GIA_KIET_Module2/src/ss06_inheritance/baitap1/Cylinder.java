@@ -2,11 +2,13 @@ package ss06_inheritance.baitap1;
 
 public class Cylinder extends Circle {
     private double height;
+//    thành phần không được kế thừa
 
-    public Cylinder(){
+    public Cylinder() {
 
     }
 
+    //overload
     public Cylinder(double radius, String color, double height) {
         super(radius, color);
         this.height = height;
@@ -20,10 +22,11 @@ public class Cylinder extends Circle {
         this.height = height;
     }
 
-    public double getVolume(){
+    public double getVolume() {
         return super.getArea() * this.height;
     }
 
+    //override của Circle
     @Override
     public String toString() {
         return "A Cylinder with height is"

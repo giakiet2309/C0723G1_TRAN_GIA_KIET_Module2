@@ -2,11 +2,14 @@ package ss06_inheritance.baitap1;
 
 public class Circle {
     private double radius;
+    // Thành phần được kế thừa
     private String color;
 
+    // Thành phần được kế thừa
     public Circle() {
     }
 
+    //overload
     public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;
