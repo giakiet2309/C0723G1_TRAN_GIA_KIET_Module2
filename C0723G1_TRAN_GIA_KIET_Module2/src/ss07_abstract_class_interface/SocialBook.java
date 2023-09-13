@@ -8,23 +8,8 @@ public class SocialBook extends Book implements IBook {
         this.author = author;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return "SocialBook{" +
-                "author='" + author + '\'' +
-                '}';
-    }
-
     @Override
     public void display() {
-
+        System.out.println(super.toString() + "Tác giả : " + this.author + '\n');
     }
 }

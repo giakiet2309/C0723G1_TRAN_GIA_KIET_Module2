@@ -35,6 +35,7 @@ public class Circle {
         return Math.pow(this.radius, 2) * Math.PI;
     }
 
+    //override của Class Obj
     @Override
     public String toString() {
         return "A Circle with radius ="
