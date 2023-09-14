@@ -1,6 +1,6 @@
 package ss07_abstract_class_interface;
 
-public class SocialBook extends Book implements IBook {
+public class SocialBook extends Book  {
     private String author;
 
     public SocialBook(String nameBook, String publisher, String yearOfPublication, String author) {

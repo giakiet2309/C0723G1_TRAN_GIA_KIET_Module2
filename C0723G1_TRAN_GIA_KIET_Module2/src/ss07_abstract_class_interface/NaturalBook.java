@@ -1,6 +1,6 @@
 package ss07_abstract_class_interface;
 
-public class NaturalBook extends Book implements IBook {
+public class NaturalBook extends Book  {
     private int numberOfPublication;
 
     public NaturalBook(String nameBook, String publisher, String yearOfPublication, int numberOfPublication) {
