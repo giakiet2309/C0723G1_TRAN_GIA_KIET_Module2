@@ -6,9 +6,10 @@ public class Fruit {
     private String manufacturingDate;
     private String outOfDate;
     private String origin;
-    private Double price;
+    private String price;
 
-    public Fruit(String nameFruit, String typesFruit, String manufacturingDate, String outOfDate, String origin, Double price) {
+    public Fruit(String nameFruit, String typesFruit, String manufacturingDate,
+                 String outOfDate, String origin, String price) {
         this.nameFruit = nameFruit;
         this.typesFruit = typesFruit;
         this.manufacturingDate = manufacturingDate;
@@ -57,23 +58,22 @@ public class Fruit {
         this.origin = origin;
     }
 
-    public Double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
     @Override
     public String toString() {
-        return "Fruit{" +
-                "nameFruit='" + nameFruit + '\'' +
-                ", typesFruit='" + typesFruit + '\'' +
-                ", manufacturingDate='" + manufacturingDate + '\'' +
-                ", outOfDate='" + outOfDate + '\'' +
-                ", origin='" + origin + '\'' +
-                ", price=" + price +
-                '}';
+        return
+                "Tên hoa quả : " + nameFruit + '\n' +
+                "Kiểu hoa quả : " + typesFruit + '\n' +
+                "Ngày sản xuất : " + manufacturingDate + '\n' +
+                "Hạn sử dụng : " + outOfDate + '\n' +
+                "Xuất xứ : " + origin + '\n' +
+                "Giá : " + price + "Đ" +'\n';
     }
 }
