@@ -29,11 +29,11 @@ public class ExpenditureService implements IExpenditureService {
             try {
                 id = Integer.parseInt(scanner.nextLine());
                 if (expenditureRepository.checkId(id)) {
-                    throw new UniqueIdException();
+                    throw new UniqueIdException("Id đã tồn tại");
                 } else
                     break;
             } catch (UniqueIdException e) {
-                System.out.println("ID " + id + " đã tồn tại");
+                System.out.println(e.getMessage());
             }
         } while (true);
         System.out.println("Nhập tên chi tiêu : ");
@@ -57,13 +57,13 @@ public class ExpenditureService implements IExpenditureService {
             try {
                 id = Integer.parseInt(scanner.nextLine());
                 if (!expenditureRepository.delete(id)) {
-                    throw new IdNotFoundException();
+                    throw new IdNotFoundException("Id không tồn tại");
                 } else {
                     System.out.println("Xóa thành công");
                     break;
                 }
-            }catch (IdNotFoundException e){
-                System.out.println("id không tồn tại");
+            } catch (IdNotFoundException e) {
+                System.out.println(e.getMessage());
             }
 
         } while (true);
