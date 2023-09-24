@@ -1,9 +1,9 @@
-package ss15_exception.service;
+package ss16_io_text_file.service;
 
-import ss15_exception.exeptions.IdNotFoundException;
-import ss15_exception.exeptions.UniqueIdException;
-import ss15_exception.model.Expenditure;
-import ss15_exception.repository.ExpenditureRepository;
+import ss16_io_text_file.exeptions.IdNotFoundException;
+import ss16_io_text_file.exeptions.UniqueIdException;
+import ss16_io_text_file.model.Expenditure;
+import ss16_io_text_file.repository.ExpenditureRepository;
 
 import java.util.List;
 import java.util.Scanner;
@@ -16,14 +16,19 @@ public class ExpenditureService implements IExpenditureService {
     @Override
     public void display() {
         List<Expenditure> expenditureList = expenditureRepository.display();
-        for (Expenditure expenditure : expenditureList) {
-            System.out.println(expenditure);
+        if (!expenditureList.isEmpty()) {
+            for (Expenditure expenditure : expenditureList) {
+                System.out.println(expenditure);
+            }
+        } else {
+            System.out.println("Danh sách trống");
         }
+
     }
 
     @Override
     public void add() {
-        int id = 0;
+        int id;
         do {
             System.out.println("Nhập id chi tiêu : ");
             try {
@@ -51,7 +56,7 @@ public class ExpenditureService implements IExpenditureService {
 
     @Override
     public void delete() {
-        int id = 0;
+        int id;
         do {
             System.out.println("Nhập id muốn xóa");
             try {
