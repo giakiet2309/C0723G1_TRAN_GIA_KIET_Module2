@@ -3,9 +3,7 @@ package ss19_string_regex;
 
 public class ValidateEmail {
     private static final String EMAIL = "^\\w{6,32}@\\w{2,12}\\.\\w{2,12}";
-
     public static void main(String[] args) {
-
         String test1 = "NguyenVanA2000@gmail.com";
         String test2 = "Nguy_enV_anA_2000@gmail.com";
         String test3 = "Nguye@gmail.com";
@@ -25,7 +23,6 @@ public class ValidateEmail {
         System.out.print(test6 + " : ");
         checkRegex(test6);
     }
-
     public static void checkRegex(String str) {
         if (str.matches(EMAIL)) {
             System.out.println("Gmail hợp lệ");
