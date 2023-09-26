@@ -46,6 +46,7 @@ public class ExpenditureRepository implements IExpenditureRepository {
         for (Expenditure expenditure : expenditureList) {
             if (expenditure.getId() == id) {
                 expenditureList.remove(expenditure);
+
                 List<String> strings = converToString(expenditureList);
                 ReadAndWrite.write(FILE_PATCH, strings);
                 return true;
@@ -63,6 +64,7 @@ public class ExpenditureRepository implements IExpenditureRepository {
                 expenditureList.get(i).setDate(expenditure.getDate());
                 expenditureList.get(i).setPrice(expenditure.getPrice());
                 expenditureList.get(i).setDescribe(expenditure.getDescribe());
+
                 List<String> stringList = converToString(expenditureList);
                 ReadAndWrite.write(FILE_PATCH, stringList);
             }

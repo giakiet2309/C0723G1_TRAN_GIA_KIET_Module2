@@ -24,7 +24,8 @@ public class ReadAndWrite {
                 try {
                     bufferedReader.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    throw new RuntimeException(e);
+
                 }
             }
         }
