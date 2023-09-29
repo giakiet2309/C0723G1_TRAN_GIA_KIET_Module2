@@ -19,8 +19,8 @@ public class ReadAndWrite {
     }
     public static void write(String filePatch,List<String> strings){
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(filePatch)))){
-            for(String stringlist:strings){
-                bufferedWriter.write(stringlist);
+            for(String stringList:strings){
+                bufferedWriter.write(stringList);
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {

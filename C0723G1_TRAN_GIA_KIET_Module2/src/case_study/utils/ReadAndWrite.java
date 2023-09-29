@@ -1,4 +1,4 @@
-package testdocghi.ReadAndWrite;
+package case_study.utils;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,12 +7,12 @@ import java.util.List;
 public class ReadAndWrite {
     public static List<String> read(String filePatch) {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(filePatch)))) {
-            List<String> stringList = new ArrayList<>();
+            List<String> strings = new ArrayList<>();
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
-                stringList.add(line);
+                strings.add(line);
             }
-            return stringList;
+            return strings;
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
